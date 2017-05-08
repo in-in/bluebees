@@ -4,7 +4,7 @@ include blocks/social.pug
 mjml
   include blocks/head.pug
   mj-body
-    mj-container
+    mj-container(width='800px', background-color=bodyBg)
       mj-hero(
         mode='fixed-height'
         height='317px'
@@ -15,6 +15,9 @@ mjml
             color='#fff'
             font-weight='700'
             font-family='Roboto, sans-serif') On Air
+      mj-section(background-color='gold', mj-class='inner-padding')
+        mj-column
+          mj-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad placeat, voluptatem assumenda id minima quos fugiat repellat soluta itaque? Maxime sapiente neque animi enim aliquam assumenda officia aut. Iure, error!
       mj-section
         mj-column
           +social()
