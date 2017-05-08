@@ -1,0 +1,20 @@
+include blocks/variables.pug
+include blocks/social.pug
+
+mjml
+  include blocks/head.pug
+  mj-body
+    mj-container
+      mj-hero(
+        mode='fixed-height'
+        height='317px'
+        background-url=`${imagePath}picto.png`
+        background-color=bodyBg)
+        mj-hero-content
+          mj-text(
+            color='#fff'
+            font-weight='700'
+            font-family='Roboto, sans-serif') On Air
+      mj-section
+        mj-column
+          +social()

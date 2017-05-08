@@ -1,0 +1,27 @@
+{
+  "name": "bluebees",
+  "version": "1.0.0",
+  "description": "Responsive email",
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "scripts": {
+    "start": "gulp",
+    "dist": "gulp dist"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-latest": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-imagemin": "^3.2.0",
+    "gulp-mjml": "^2.2.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0"
+  }
+}
