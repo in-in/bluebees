@@ -1,14 +1,14 @@
 mixin phone(nums)
   mj-text(
     align='right'
-    font-size='14px'
-    color=whiteColor)
+    color=whiteColor
+    font-size='14px')
     img(
-      style='padding-left: 10px; padding-top: 6px;'
+      align='right'
       alt=''
       height='auto'
-      width='17'
       src='assets/images/icon-phone.png'
-      align='right')
+      style='padding-left: 10px; padding-top: 4px;'
+      width='17')
     each n in nums
       p.phone!= n

@@ -1,12 +1,11 @@
 include logo.pug
 include phone.pug
-include button.pug
 
 mixin hero()
   mj-section(
     background-repeat='no-repeat'
     background-size='cover'
-    background-url=imagePath + 'hero.jpg'
+    background-url=pathToImage + 'hero.jpg'
     padding-left='25px'
     padding-right='25px'
     padding-top='25px')
@@ -22,23 +21,23 @@ mixin hero()
           ])
     mj-column(width='100%')
       mj-text(
-        mj-class='title title--small'
+        mj-class='main-title main-title--small'
         line-height='.6'
         padding-top='44px') We are an
       mj-text(
-        mj-class='title'
+        mj-class='main-title'
         color=mainColor
-        font-size='62px'
+        font-size='50px'
         line-height='1') Creative
       mj-text(
-        mj-class='title title--small'
+        mj-class='main-title main-title--small'
         line-height='.8') Digital Agency
     mj-column(width='60%')
       mj-text(
         align='center'
         color=whiteColor
-        line-height='1.5'
         font-size='15px'
+        line-height='1.5'
         padding-top='12px') Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet 
       +button()&attributes({
         'padding-top': '27px',

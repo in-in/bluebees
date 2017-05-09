@@ -1,13 +1,13 @@
 mixin button(text)
   mj-button(
-    border='3px solid' + whiteColor
+    background-color='transparent'
     border-radius='0'
+    border='3px solid' + whiteColor
+    color=whiteColor
+    font-family='Open Sans, sans-serif'
     font-size='12px'
     font-weight='700'
-    font-family='Open Sans, sans-serif'
-    color=whiteColor
-    text-transform='uppercase'
     href='#x'
     inner-padding='7px 20px'
     padding='0'
-    background-color='transparent')&attributes(attributes)!= text || 'Click here'
+    text-transform='uppercase')&attributes(attributes)!= text || 'Click here'

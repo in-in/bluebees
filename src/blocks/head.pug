@@ -13,24 +13,35 @@ mj-head
       padding-left='44px'
       padding-right='44px')/
     mj-class(
-      name='title'
+      name='main-title'
       align='center'
       font-weight='800'
       text-transform='uppercase')/
     mj-class(
-      name='title--small'
+      name='main-title--small'
       color=whiteColor
       font-size='30px')/
+    mj-class(
+      name='text'
+      line-height='1.6'
+      font-size='15px')/
 
   mj-style(inline='inline') 
     | a { text-decoration: none; color: inherit; }
     | p { margin: 0; color: inherit; }
   mj-style.
     @media all and (min-width: 480px) {
+      div[style*='font-size:50px;'] {
+        font-size: 62px !important;
+      }
       img[alt='logo'] {
         width: 122px !important;
       }
       .phone {
         font-size: 16px !important;
+      }
+      td[style*='padding-top:20px;'][align='right'] {
+        padding-top: 15px !important;
+        padding-right: 67px !important;
       }
     }

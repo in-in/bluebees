@@ -1,5 +1,6 @@
 include blocks/variables.pug
 include blocks/hero.pug
+include blocks/button.pug
 include blocks/social.pug
 
 mjml
@@ -7,9 +8,31 @@ mjml
   mj-body
     mj-container(width='800px', background-color=bodyBg)
       +hero()
-      mj-section(background-color='gold', mj-class='inner-padding')
-        mj-column
-          mj-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad placeat, voluptatem assumenda id minima quos fugiat repellat soluta itaque? Maxime sapiente neque animi enim aliquam assumenda officia aut. Iure, error!
+      //- what we do
+      mj-section(
+        mj-class='inner-padding'
+        padding-top='33px'
+        padding-bottom='45px'
+        background-color=mainColor)
+        mj-column(width='55%')
+          mj-text(
+            padding-bottom='4px'
+            color=whiteColor
+            font-size='30px'
+            font-weight='700') What we do?
+          mj-text(
+            mj-class='text'
+            padding-bottom='20px'
+            color=whiteColor) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet 
+          +button()&attributes({'align': 'left'})
+        mj-column(width='45%')
+          mj-image(
+            align='right'
+            alt='what we do'
+            padding-top='20px'
+            src=pathToImage + 'section1.png'
+            width='157px')
+      //- social
       mj-section
         mj-column
           +social()
