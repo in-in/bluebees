@@ -1,0 +1,19 @@
+include logo.pug
+include phone.pug
+
+mixin hero()
+  mj-section(
+    background-repeat='no-repeat'
+    background-size='cover'
+    background-url=imagePath + 'hero.jpg'
+    padding-left='25px'
+    padding-right='25px'
+    padding-top='25px')
+    mj-group(vertical-align='middle')
+      mj-column(vertical-align='middle')
+        +logo()
+      mj-column(vertical-align='middle')
+        +phone([
+          ['+ (000) 123 4567'],
+          ['+ (123) 456 7890']
+          ])
