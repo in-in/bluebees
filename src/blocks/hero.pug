@@ -1,5 +1,6 @@
 include logo.pug
 include phone.pug
+include button.pug
 
 mixin hero()
   mj-section(
@@ -9,7 +10,9 @@ mixin hero()
     padding-left='25px'
     padding-right='25px'
     padding-top='25px')
-    mj-group(vertical-align='middle')
+    mj-group(
+      width='100%'
+      vertical-align='middle')
       mj-column(vertical-align='middle')
         +logo()
       mj-column(vertical-align='middle')
@@ -17,3 +20,27 @@ mixin hero()
           ['+ (000) 123 4567'],
           ['+ (123) 456 7890']
           ])
+    mj-column(width='100%')
+      mj-text(
+        mj-class='title title--small'
+        line-height='.6'
+        padding-top='44px') We are an
+      mj-text(
+        mj-class='title'
+        color=mainColor
+        font-size='62px'
+        line-height='1') Creative
+      mj-text(
+        mj-class='title title--small'
+        line-height='.8') Digital Agency
+    mj-column(width='60%')
+      mj-text(
+        align='center'
+        color=whiteColor
+        line-height='1.5'
+        font-size='15px'
+        padding-top='12px') Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet 
+      +button()&attributes({
+        'padding-top': '27px',
+        'padding-bottom': '58px'
+        })
