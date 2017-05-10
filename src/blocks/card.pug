@@ -1,0 +1,25 @@
+mixin card(list)
+  each item in list
+    mj-column
+      mj-image(
+        width='220px'
+        padding-left='12px'
+        padding-right='12px'
+        src=pathToImage + item.img)
+      mj-text(
+        align='center'
+        font-size='18px'
+        font-weight='700'
+        color=mainColor
+        padding-left='12px'
+        padding-right='12px')
+        p.card-feature.card-feature__title!= item.title
+      mj-text(
+        align='center'
+        color=darkText
+        font-size='14px'
+        line-height='1.7'
+        padding-bottom='22px'
+        padding-left='12px'
+        padding-right='12px')
+        p.card-feature.card-feature__desc!= item.desc

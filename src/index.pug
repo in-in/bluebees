@@ -2,12 +2,13 @@ include blocks/variables.pug
 include blocks/hero.pug
 include blocks/button.pug
 include blocks/subtitle-dual.pug
+include blocks/card.pug
 include blocks/social.pug
 
 mjml
   include blocks/head.pug
   mj-body
-    mj-container(width='800px', background-color=bodyBg)
+    mj-container(width='800px')
       +hero()
       //- what we do
       mj-section(
@@ -34,12 +35,42 @@ mjml
             src=pathToImage + 'section1.png'
             width='157px')
       //- features
-      mj-section
+      mj-section(padding-bottom='50px', background-color=bodyBg)
         +subtitle-dual({
           type: false,
           first: 'Take a look to our main services',
           second: 'Awesome  Services'
             })
+      mj-section(
+        background-color=bodyBg
+        padding-left='33px'
+        padding-right='33px')
+        +card([
+          {
+            img: 'service1.png',
+            title: 'Web Development',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet '
+          },
+          {
+            img: 'service2.png',
+            title: 'Graphic Design',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet '
+          },
+          {
+            img: 'service3.png',
+            title: 'Data Analytics',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet '
+          }
+        ])
+      mj-section(
+        background-color=bodyBg
+        mj-class='inner-padding')
+        mj-column
+          mj-text(
+            mj-class='text'
+            align='center'
+            padding-bottom='32px'
+            padding-top='3px') Lorem ipsum dolor sit amet, consectetuer a iscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
       //- social
       mj-section
         mj-column
