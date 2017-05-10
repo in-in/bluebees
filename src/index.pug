@@ -1,6 +1,7 @@
 include blocks/variables.pug
 include blocks/hero.pug
 include blocks/button.pug
+include blocks/subtitle-dual.pug
 include blocks/social.pug
 
 mjml
@@ -32,6 +33,13 @@ mjml
             padding-top='20px'
             src=pathToImage + 'section1.png'
             width='157px')
+      //- features
+      mj-section
+        +subtitle-dual({
+          type: false,
+          first: 'Take a look to our main services',
+          second: 'Awesome  Services'
+            })
       //- social
       mj-section
         mj-column

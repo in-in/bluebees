@@ -1,0 +1,28 @@
+mixin subtitle-dual(data)
+  -
+    function getType(type) {
+      switch(type) {
+        case 'light':
+          return whiteColor
+        case 'dark':
+          return darkText
+          }
+      }
+
+  mj-column(
+    width='100%'
+    background-color='pink')&attributes(attributes)
+    mj-text(
+      align='center'
+      color=getType(data.type) || darkText
+      font-size='20px'
+      font-style='italic'
+      font-weight='400'
+      line-height='1.1'
+      padding-top='40px')!= data.first
+    mj-text(
+      align='center'
+      color=getType(data.type) || mainColor
+      font-size='36px'
+      font-weight='800'
+      line-height='1.1')!= data.second
