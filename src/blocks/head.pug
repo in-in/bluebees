@@ -25,6 +25,11 @@ mj-head
       name='text'
       line-height='1.6'
       font-size='15px')/
+    mj-class(
+      name='half-section-text'
+      color=whiteColor
+      padding-right='54px'
+      padding-left='54px')/
 
   mj-style(inline='inline').
     a { text-decoration: none; color: inherit; }
@@ -43,6 +48,9 @@ mj-head
     }
     .card-feature__desc {
       padding-bottom: 35px !important;
+    }
+    p[style*='border-top: 4px solid #fff; width: 148px;'] {
+      margin-left: 0 !important;
     }
   mj-style.
     @media all and (min-width: 480px) {
