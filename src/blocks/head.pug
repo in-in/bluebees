@@ -30,6 +30,37 @@ mj-head
       color=whiteColor
       padding-right='54px'
       padding-left='54px')/
+    //- card
+    mj-class(
+      name='card-column--feature'
+      width='220px'
+      background-color='pink'
+      border-right='12px solid ' + bodyBg
+      border-left='12px solid ' + bodyBg)/
+    mj-class(
+      name='card-image--feature'
+      width='220px'
+      container-background-color='seagreen')/
+    mj-class(
+      name='card-title'
+      color=mainColor
+      font-size='18px'
+      padding-left='12px'
+      padding-right='12px'
+      font-weight='700')/
+    mj-class(
+      name='card-title--service'
+      color=darkText
+      font-size='20px'
+      font-weight='600')/
+    mj-class(
+      name='card-desc'
+      font-size='14px'
+      padding-left='12px'
+      padding-right='12px')/
+    mj-class(
+      name='card-desc--service'
+      font-size='15px')/
 
   mj-style(inline='inline').
     a { text-decoration: none; color: inherit; }
@@ -39,7 +70,7 @@ mj-head
     .card-feature {
       margin-left: auto !important;
       margin-right: auto !important;
-      width: 220px !important;
+      max-width: 220px !important;
       background-color: #fff !important;
     }
     .card-feature__title {

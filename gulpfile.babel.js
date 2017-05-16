@@ -52,6 +52,7 @@ const build = () => {
         }
       })
     }))
+    // .pipe(pug({pretty: true}))
     .pipe(pug())
     .pipe(mjml())
     .pipe(gulp.dest(paths.dist))

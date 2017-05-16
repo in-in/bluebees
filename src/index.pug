@@ -47,19 +47,25 @@ mjml
         padding-right='33px')
         +card([
           {
-            img: 'service1.png',
+            img: ['service1.png', 220],
             title: 'Web Development',
-            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet '
+            titleClass: 'card-title',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet ',
+            descClass: 'card-desc'
           },
           {
-            img: 'service2.png',
+            img: ['service2.png', 220],
             title: 'Graphic Design',
-            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet '
+            titleClass: 'card-title',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet ',
+            descClass: 'card-desc'
           },
           {
-            img: 'service3.png',
+            img: ['service3.png', 220],
             title: 'Data Analytics',
-            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet '
+            titleClass: 'card-title',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet ',
+            descClass: 'card-desc'
           }
         ])
       mj-section(
@@ -139,6 +145,48 @@ mjml
             padding-bottom='25px') Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
         mj-column
           mj-image(src=pathToImage + 'work2.jpg')
+            
+      //- services
+      mj-section(padding-bottom='50px', background-color=bodyBg)
+        +subtitle-dual({
+          type: false,
+          first: 'Take a look to our main services',
+          second: 'Awesome  Services2'
+            })
+      mj-section(
+        background-color=bodyBg
+        padding-left='33px'
+        padding-right='33px')
+        +card([
+          {
+            columnClass: 'card-column--feature',
+            img: ['icon-services1.png', 64],
+            imageClass: 'card-image--feature',
+            title: 'Web Design',
+            titleClass: 'card-title--service',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh',
+            descClass: 'card-desc--service'
+          },
+          {
+            columnClass: 'card-column--feature',
+            img: ['icon-services2.png', 64],
+            imageClass: 'card-image--feature',
+            title: 'Graphic Design',
+            titleClass: 'card-title--service',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh',
+            descClass: 'card-desc--service'
+          },
+          {
+            columnClass: 'card-column--feature',
+            img: ['icon-services3.png', 64],
+            imageClass: 'card-image--feature',
+            title: 'SEO',
+            titleClass: 'card-title--service',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh',
+            descClass: 'card-desc--service'
+          }
+        ])
+      
       //- social
       mj-section
         mj-column
