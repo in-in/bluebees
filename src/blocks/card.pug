@@ -1,9 +1,9 @@
 mixin card(list)
   each item in list
     mj-column(
-      mj-class=item.columnClass)
+      css-class='card-column ' + item.columnClass)
       mj-image(
-        mj-class=item.imageClass
+        css-class=item.imageClass
         width=item.img[1]
         padding-left='12px'
         padding-right='12px'
@@ -11,11 +11,13 @@ mixin card(list)
       mj-text(
         mj-class=item.titleClass
         align='center')
-        p.card-feature.card-feature__title!= item.title
+        //- p.card-feature.card-feature__title!= item.title
+        p.card-feature__title!= item.title
       mj-text(
         mj-class=item.descClass
         align='center'
         color=darkText
         line-height='1.7'
         padding-bottom='22px')
-        p.card-feature.card-feature__desc!= item.desc
+        //- p.card-feature.card-feature__desc!= item.desc
+        p.card-feature__desc!= item.desc
