@@ -61,31 +61,8 @@ mj-head
       name='card-desc--service'
       font-size='15px')/
 
-  mj-style(inline='inline').
-    a { text-decoration: none; color: inherit; }
-    p { margin: 0; color: inherit; }
-    
-  mj-style.
-    .card-column {
-      margin-left: auto !important;
-      margin-right: auto !important;
-      max-width: 220px !important;
-    }
-    .card-feature__title {
-      padding-top: 20px !important;
-      padding-bottom: 17px !important;
-      background-color: #fff
-    }
-    .card-feature__desc {
-      padding-bottom: 35px !important;
-      background-color: #fff
-    }
-    .card-column--feature {
-      max-width: 220px !important;
-    }
-    p[style*='border-top: 4px solid #fff; width: 148px;'] {
-      margin-left: 0 !important;
-    }
+  mj-style(inline='inline')
+    include ../css/main-inline.css
   mj-style.
     @media all and (min-width: 480px) {
       div[style*='font-size:50px;'] {
