@@ -8,77 +8,9 @@ mj-head
     mj-section(padding='0')/
     mj-image(padding='0')/
     mj-text(padding='0', line-height='1.3')/
-    mj-class(
-      name='inner-padding'
-      padding-left='44px'
-      padding-right='44px')/
-    mj-class(
-      name='main-title'
-      align='center'
-      font-weight='800'
-      text-transform='uppercase')/
-    mj-class(
-      name='main-title--small'
-      color=whiteColor
-      font-size='30px')/
-    mj-class(
-      name='text'
-      line-height='1.6'
-      font-size='15px')/
-    mj-class(
-      name='half-section-text'
-      color=whiteColor
-      padding-right='54px'
-      padding-left='54px')/
-    //- card
-    mj-class(
-      name='card-column--feature'
-      width='220px'
-      border-right='12px solid ' + bodyBg
-      border-left='12px solid ' + bodyBg)/
-    mj-class(
-      name='card-image--feature'
-      width='220px'
-      container-background-color='gold')/
-    mj-class(
-      name='card-title'
-      color=mainColor
-      font-size='18px'
-      padding-left='12px'
-      padding-right='12px'
-      font-weight='700')/
-    mj-class(
-      name='card-title--service'
-      color=darkText
-      font-size='20px'
-      font-weight='600')/
-    mj-class(
-      name='card-desc'
-      font-size='14px'
-      padding-left='12px'
-      padding-right='12px')/
-    mj-class(
-      name='card-desc--service'
-      font-size='15px')/
+    include mj-class.pug
 
   mj-style(inline='inline')
     include ../css/main-inline.css
-  mj-style.
-    @media all and (min-width: 480px) {
-      div[style*='font-size:50px;'] {
-        font-size: 62px !important;
-      }
-      img[alt='logo'] {
-        width: 122px !important;
-      }
-      .phone {
-        font-size: 16px !important;
-      }
-      td[style*='padding-top:20px;'][align='right'] {
-        padding-top: 15px !important;
-        padding-right: 67px !important;
-      }
-      .card-feature {
-        width: auto !important;
-      }
-    }
+  mj-style
+    include ../css/media.css
