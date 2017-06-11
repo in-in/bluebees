@@ -37,36 +37,37 @@ mjml
             src=pathToImage + 'section1.png'
             width='157px')
       //- features
-      mj-section(padding-bottom='50px', background-color=bodyBg)
+      mj-section(
+        padding-bottom='50px'
+        background-color=bodyBg)
         +subtitle-dual({
           type: false,
           first: 'Take a look to our main services',
           second: 'Awesome  Services'
             })
       mj-section(
-        background-color=bodyBg
-        padding-left='33px'
-        padding-right='33px')
+        mj-class='inner-padding'
+        background-color=bodyBg)
         +card([
           {
             img: ['service1.png', 220],
             title: 'Web Development',
             titleClass: 'card-title',
-            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet ',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh',
             descClass: 'card-desc'
           },
           {
             img: ['service2.png', 220],
             title: 'Graphic Design',
             titleClass: 'card-title',
-            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet ',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh',
             descClass: 'card-desc'
           },
           {
             img: ['service3.png', 220],
             title: 'Data Analytics',
             titleClass: 'card-title',
-            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet ',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh',
             descClass: 'card-desc'
           }
         ])

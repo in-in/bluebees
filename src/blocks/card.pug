@@ -1,23 +1,25 @@
 mixin card(list)
   each item in list
     mj-column(
-      css-class='card-column ' + item.columnClass)
+      css-class='card-column'
+      background-color='pink')
+
       mj-image(
-        css-class=item.imageClass
+        css-class='card-image ' + item.imageClass
         width=item.img[1]
-        padding-left='12px'
-        padding-right='12px'
         src=pathToImage + item.img[0])
+
       mj-text(
         mj-class=item.titleClass
         align='center')
-        //- p.card-feature.card-feature__title!= item.title
+
         p.card-feature__title!= item.title
+
       mj-text(
         mj-class=item.descClass
         align='center'
         color=darkText
         line-height='1.7'
         padding-bottom='22px')
-        //- p.card-feature.card-feature__desc!= item.desc
+
         p.card-feature__desc!= item.desc

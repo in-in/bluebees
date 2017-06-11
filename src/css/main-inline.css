@@ -9,10 +9,21 @@ p {
 }
 
 .card-column {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 220px;
- }
+  width: 220px !important;
+  background-color: tan !important;
+}
+ 
+.card-image {
+  background-color: green !important;
+  text-align: center;
+}
+
+.card-image > td {
+  display: inline-block;
+  max-width: 220px !important;
+  width: 220px !important;
+  background-color: orange !important;
+}
  
 .card-feature__title {
   padding-top: 20px;
