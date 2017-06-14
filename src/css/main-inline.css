@@ -1,1 +1,38 @@
-a{text-decoration:none;color:inherit}p{margin:0;color:inherit}.card-column{width:220px !important;background-color:red !important}.card-image{background-color:red !important;text-align:center}.card-image>td{display:inline-block;max-width:220px !important;width:220px !important;background-color:orange !important}.card-feature__title{padding-top:20px;padding-bottom:17px;background-color:#fff}.card-feature__desc{padding-bottom:35px;background-color:#fff}.card-column--feature{max-width:220px}.underline p{width:148px;height:4px;background-color:#fff}
+a {
+  text-decoration: none;
+  color: inherit; }
+
+p {
+  margin: 0;
+  color: inherit; }
+
+.card {
+  width: 220px !important;
+  background-color: red !important; }
+  .card__image {
+    text-align: center; }
+    .card__image > td {
+      display: inline-block;
+      max-width: 220px !important;
+      width: 100%; }
+  .card__title {
+    text-align: center; }
+    .card__title-text {
+      display: inline-block;
+      width: 100%;
+      max-width: 220px !important;
+      padding-top: 20px;
+      padding-bottom: 17px;
+      background-color: white; }
+  .card__desc {
+    text-align: center; }
+    .card__desc-text {
+      display: inline-block;
+      background-color: white;
+      max-width: 220px !important;
+      width: 100%; }
+
+.underline p {
+  width: 148px;
+  height: 4px;
+  background-color: #fff; }

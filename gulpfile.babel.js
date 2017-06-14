@@ -52,13 +52,13 @@ const css = () => {
     .pipe(plumber({
       errorHandler: notify.onError(function(err) {
         return {
-           title: err.plugin.toUpperCase(),
-           message: err.message
+          title: err.plugin.toUpperCase(),
+          message: err.message
         }
       })
     }))
     .pipe(sass({
-      outputStyle: 'compressed'
+      // outputStyle: 'compressed'
     }))
     .pipe(gulp.dest(paths.sass.dist))
 }
