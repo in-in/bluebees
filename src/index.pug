@@ -134,26 +134,48 @@ mjml
           second: 'Awesome  Services2'
             })
       mj-section(
-        background-color=bodyBg
-        padding-left='33px'
-        padding-right='33px')
+        mj-class='section-service'
+        background-color=bodyBg)
         +card([
           {
-            columnClass: 'card--service',
+            cardClass: 'card--service',
             img: ['icon-services1.png', 64],
             title: 'Web Design',
             desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh'
           },
           {
-            columnClass: 'card--service',
+            cardClass: 'card--service',
             img: ['icon-services2.png', 64],
             title: 'Graphic Design',
             desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh'
           },
           {
-            columnClass: 'card--service',
+            cardClass: 'card--service',
             img: ['icon-services3.png', 64],
             title: 'SEO',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh'
+          }
+        ])
+      mj-section(
+        mj-class='section-service'
+        background-color=bodyBg)
+        +card([
+          {
+            cardClass: 'card--service',
+            img: ['icon-services4.png', 64],
+            title: 'Social Media',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh'
+          },
+          {
+            cardClass: 'card--service',
+            img: ['icon-services5.png', 64],
+            title: 'Blog',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh'
+          },
+          {
+            cardClass: 'card--service',
+            img: ['icon-services6.png', 64],
+            title: 'Creative',
             desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh'
           }
         ])

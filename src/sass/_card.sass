@@ -1,6 +1,9 @@
-.card
+$block: '.card'
+
+#{$block}
+  min-width: 220px !important
+  padding-bottom: 24px
   width: 220px !important
-  background-color: red !important
   
   &__image
     text-align: center
@@ -18,15 +21,16 @@
       width: 100%
       max-width: $width-card !important
       padding-top: 20px
-      padding-bottom: 17px
       background-color: $white
 
   &__desc
     text-align: center
-    // padding-bottom: 35px
-
+    
     &-text
-      display: inline-block
       background-color: $white
+      box-sizing: border-box
+      display: inline-block
       max-width: $width-card !important
+      padding-left: 10px !important
+      padding-right: 10px !important
       width: 100%

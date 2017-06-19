@@ -7,8 +7,9 @@ p {
   color: inherit; }
 
 .card {
-  width: 220px !important;
-  background-color: red !important; }
+  min-width: 220px !important;
+  padding-bottom: 24px;
+  width: 220px !important; }
   .card__image {
     text-align: center; }
     .card__image > td {
@@ -22,15 +23,100 @@ p {
       width: 100%;
       max-width: 220px !important;
       padding-top: 20px;
-      padding-bottom: 17px;
       background-color: white; }
   .card__desc {
     text-align: center; }
     .card__desc-text {
-      display: inline-block;
       background-color: white;
+      box-sizing: border-box;
+      display: inline-block;
+      max-width: 220px !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      width: 100%; }
+
+.card {
+  min-width: 220px !important;
+  padding-bottom: 24px;
+  width: 220px !important; }
+  .card__image {
+    text-align: center; }
+    .card__image > td {
+      display: inline-block;
       max-width: 220px !important;
       width: 100%; }
+  .card__title {
+    text-align: center; }
+    .card__title-text {
+      display: inline-block;
+      width: 100%;
+      max-width: 220px !important;
+      padding-top: 20px;
+      background-color: white; }
+  .card__desc {
+    text-align: center; }
+    .card__desc-text {
+      background-color: white;
+      box-sizing: border-box;
+      display: inline-block;
+      max-width: 220px !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      width: 100%; }
+
+.card--feature .card__title-text {
+  color: #0069e3;
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 16px; }
+
+.card--feature .card__desc-text {
+  color: #4a4a4a;
+  font-size: 14px;
+  padding-bottom: 35px; }
+
+.card {
+  min-width: 220px !important;
+  padding-bottom: 24px;
+  width: 220px !important; }
+  .card__image {
+    text-align: center; }
+    .card__image > td {
+      display: inline-block;
+      max-width: 220px !important;
+      width: 100%; }
+  .card__title {
+    text-align: center; }
+    .card__title-text {
+      display: inline-block;
+      width: 100%;
+      max-width: 220px !important;
+      padding-top: 20px;
+      background-color: white; }
+  .card__desc {
+    text-align: center; }
+    .card__desc-text {
+      background-color: white;
+      box-sizing: border-box;
+      display: inline-block;
+      max-width: 220px !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      width: 100%; }
+
+.card--service .card__image > td {
+  padding-top: 25px !important; }
+
+.card--service .card__title-text {
+  color: #1e0404;
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 15px; }
+
+.card--service .card__desc-text {
+  color: #1e0404;
+  font-size: 15px;
+  padding-bottom: 28px; }
 
 .underline p {
   width: 148px;
