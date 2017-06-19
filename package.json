@@ -16,7 +16,7 @@
     "babel-preset-latest": "^6.24.1",
     "babel-register": "^6.24.1",
     "browser-sync": "^2.18.12",
-    "del": "^2.2.2",
+    "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-imagemin": "^3.3.0",
     "gulp-mjml": "^2.2.0",
