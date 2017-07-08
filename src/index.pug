@@ -83,45 +83,53 @@ mjml
           mj-image(src=pathToImage + 'work1.jpg')
         mj-column(vertical-align='top')
           mj-text(
-            mj-class='half-section-text'
+            mj-class='half-section-padding'
+            color=whiteColor
             font-size='20px'
             font-weight='600'
             padding-bottom='16px'
             padding-top='65px') Simple and Clean
           +underline(54, 14)
           mj-text(
-            mj-class='text half-section-text') Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            mj-class='text half-section-padding'
+            color=whiteColor) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
           mj-text(
-            mj-class='half-section-text'
+            mj-class='half-section-padding'
+            color=whiteColor
             font-size='20px'
             font-weight='600'
             padding-bottom='16px'
             padding-top='65px') Great Support
           +underline(54, 14)
           mj-text(
-            mj-class='text half-section-text'
+            mj-class='text half-section-padding'
+            color=whiteColor
             padding-bottom='26px') Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
           
       mj-section(background-color=mainColor)
         mj-column(vertical-align='middle')
           mj-text(
-            mj-class='half-section-text'
+            mj-class='half-section-padding'
+            color=whiteColor
             font-size='20px'
             font-weight='600'
             padding-bottom='16px'
             padding-top='65px') Simple and Clean
           +underline(54, 14)
           mj-text(
-            mj-class='text half-section-text') Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            mj-class='text half-section-padding'
+            color=whiteColor) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
           mj-text(
-            mj-class='half-section-text'
+            mj-class='half-section-padding'
+            color=whiteColor
             font-size='20px'
             font-weight='600'
             padding-bottom='16px'
             padding-top='65px') Great Support
           +underline(54, 14)
           mj-text(
-            mj-class='text half-section-text'
+            mj-class='text half-section-padding'
+            color=whiteColor
             padding-bottom='25px') Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
         mj-column
           mj-image(src=pathToImage + 'work2.jpg')
@@ -179,7 +187,27 @@ mjml
             desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh'
           }
         ])
-      
+      //- work
+      mj-section(background-color=mainColor)
+        mj-column
+          mj-image(src=pathToImage + 'work3.jpg')
+        mj-column
+          mj-text(
+            mj-class='half-section-padding'
+            padding-top='40px'
+            padding-bottom='10px'
+            color=whiteColor
+            font-size='30px'
+            font-weight='600') Graphic Design
+          mj-text(
+            mj-class='text half-section-padding'
+            padding-bottom='45px'
+            color=whiteColor) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+          +button()&attributes({
+            'align': 'left',
+            'mj-class': 'half-section-padding',
+            'padding-bottom': '50px'
+            })
       //- social
       mj-section
         mj-column
