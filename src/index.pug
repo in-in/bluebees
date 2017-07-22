@@ -3,6 +3,7 @@ include blocks/hero.pug
 include blocks/button.pug
 include blocks/subtitle-dual.pug
 include blocks/card.pug
+include blocks/cardPrice.pug
 include blocks/social.pug
 include blocks/underline.pug
 
@@ -207,6 +208,12 @@ mjml
             'align': 'left',
             'mj-class': 'half-section-padding',
             'padding-bottom': '50px'
+            })
+      mj-section(padding-bottom='50px', background-color=bodyBg)
+        +subtitle-dual({
+          type: false,
+          first: 'Here is our awesome Price',
+          second: 'Awesome  Price'
             })
       //- social
       mj-section
