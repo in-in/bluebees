@@ -1,0 +1,34 @@
+- const blck = 'price'
+
+mixin price(list)
+  each item in list
+    mj-column(
+      css-class=blck)
+
+      mj-text(
+        mj-class=blck
+        css-class=blck + '__header')
+        p(class=blck + '__title')!= item.title
+        p(class=blck + '__subtitle')!= item.subtitle
+
+      mj-text(
+        mj-class=blck
+        css-class=blck + '__desc')
+        p(class=blck + '__desc-text')!= item.desc
+          br
+          span(class=blck + '__divider')
+
+      mj-text(
+        mj-class=blck
+        css-class=blck + '__value')
+        p(class=blck + '__number')
+          span(class=blck + '__currency') $
+          != item.number
+      
+      mj-table(
+        mj-class=blck
+        padding='0'
+        width='286px')
+        tr(align='center')
+          td(style='background-color: #fff; padding-bottom: 42px')
+            a(class=blck + '__button', href='#x') Click here

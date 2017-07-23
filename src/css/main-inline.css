@@ -6,6 +6,11 @@ p {
   margin: 0;
   color: inherit; }
 
+.underline p {
+  width: 148px;
+  height: 4px;
+  background-color: #fff; }
+
 .card {
   min-width: 220px !important;
   padding-bottom: 24px;
@@ -65,7 +70,7 @@ p {
       width: 100%; }
 
 .card--feature .card__title-text {
-  color: #0069e3;
+  color: #0069df;
   font-size: 18px;
   font-weight: 700;
   padding-bottom: 16px; }
@@ -118,7 +123,56 @@ p {
   font-size: 15px;
   padding-bottom: 28px; }
 
-.underline p {
-  width: 148px;
-  height: 4px;
-  background-color: #fff; }
+.price__title, .price__subtitle, .price__desc-text, .price__number {
+  display: inline-block;
+  max-width: 286px !important;
+  width: 100%;
+  background-color: white; }
+
+.price {
+  min-width: 286px !important;
+  border-bottom: 52px solid #f5f5f5; }
+  .price__title, .price__subtitle {
+    color: white;
+    background-color: #0069df; }
+  .price__title {
+    padding-top: 14px;
+    padding-bottom: 6px;
+    font-size: 30px;
+    font-weight: 800; }
+  .price__subtitle {
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-style: italic; }
+  .price__desc-text {
+    padding-top: 33px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #1e0404; }
+  .price__divider {
+    display: inline-block;
+    width: 148px;
+    height: 4px;
+    border-top: 18px solid white;
+    background-color: #0069df; }
+  .price__number {
+    padding-top: 2px;
+    padding-bottom: 6px;
+    color: #0069df;
+    font-size: 72px;
+    font-weight: 700; }
+  .price__currency {
+    font-size: 36px; }
+  .price__button {
+    display: inline-block;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    background-color: #0069df; }

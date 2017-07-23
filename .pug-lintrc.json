@@ -42,8 +42,8 @@
   "requireStrictEqualityOperators": true,
   "validateAttributeQuoteMarks": "'",
   "validateAttributeSeparator": {
-  "separator": ", ",
-  "multiLineSeparator": "\n  "
+    "separator": ", ",
+    "multiLineSeparator": "\n  "
   },
   "validateDivTags": true,
   "validateExtensions": true,

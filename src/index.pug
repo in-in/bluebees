@@ -3,7 +3,7 @@ include blocks/hero.pug
 include blocks/button.pug
 include blocks/subtitle-dual.pug
 include blocks/card.pug
-include blocks/cardPrice.pug
+include blocks/price.pug
 include blocks/social.pug
 include blocks/underline.pug
 
@@ -204,17 +204,57 @@ mjml
             mj-class='text half-section-padding'
             padding-bottom='45px'
             color=whiteColor) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          +button()&attributes({
-            'align': 'left',
-            'mj-class': 'half-section-padding',
-            'padding-bottom': '50px'
+          +button()&attributes({'align': 'left', 'mj-class': 'half-section-padding', 'padding-bottom': '50px'
             })
-      mj-section(padding-bottom='50px', background-color=bodyBg)
+            
+      mj-section(
+        padding-bottom='20px'
+        background-color=bodyBg)
         +subtitle-dual({
           type: false,
           first: 'Here is our awesome Price',
-          second: 'Awesome  Price'
+          second: 'Awesome Price'
             })
+      mj-section(background-color=bodyBg)
+        mj-column(width='450px')
+          mj-text(
+            mj-class='text'
+            align='center'
+            padding-bottom='48px') Lorem ipsum dolor sit amet, consectetuer a iscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet
+      mj-section(
+        mj-class='section-price'
+        background-color=bodyBg)
+        +price([
+          {
+            title: 'Regular',
+            subtitle: 'awesome portfolio',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh',
+            number: '30'
+          },
+          {
+            title: 'Weekly',
+            subtitle: 'awesome portfolio',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh',
+            number: '60'
+          }
+        ])
+      mj-section(
+        mj-class='section-price'
+        background-color=bodyBg)
+        +price([
+          {
+            title: 'Monthly',
+            subtitle: 'awesome portfolio',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh',
+            number: '80'
+          },
+          {
+            title: 'Yearly',
+            subtitle: 'awesome portfolio',
+            desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh',
+            number: '100'
+          }
+        ])
       //- social
       mj-section
         mj-column
