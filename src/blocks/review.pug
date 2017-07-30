@@ -1,0 +1,37 @@
+mixin review(list)
+  - const blck = 'review'
+  
+  mj-group(width='85%')
+    mj-column(width='12%' vertical-align='top')
+      mj-image(
+        width='35px'
+        height='24px'
+        alt=''
+        src=pathToImage + 'quotes_start.png')
+    mj-column(width='76%' vertical-align='middle')
+      mj-text(align='center')
+        p(class=blck + '__text')  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet  Lorem ipsum dolor sit amet, consec
+
+    mj-column(width='12%' vertical-align='bottom')
+      mj-image(
+        width='35px'
+        height='24px'
+        alt=''
+        src=pathToImage + 'quotes_end.png')
+        
+  mj-spacer(height='20px')
+    
+  mj-column(width='100%')
+    mj-image(
+      width='63px'
+      height='63px'
+      alt='Jonathan Ive'
+      src=pathToImage + 'testimonial-avatar1.png')
+      
+    mj-spacer(height='8px')
+      
+    mj-text(align='center')
+      p(class=blck + '__name') Jonathan Ive
+      
+    mj-text(align='center')
+      p(class=blck + '__position') Designer

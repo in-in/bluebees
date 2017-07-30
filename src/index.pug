@@ -6,6 +6,7 @@ include blocks/card.pug
 include blocks/price.pug
 include blocks/social.pug
 include blocks/underline.pug
+include blocks/review.pug
 
 mjml
   include blocks/head.pug
@@ -206,7 +207,7 @@ mjml
             color=whiteColor) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
           +button()&attributes({'align': 'left', 'mj-class': 'half-section-padding', 'padding-bottom': '50px'
             })
-            
+      //- price      
       mj-section(
         padding-bottom='20px'
         background-color=bodyBg)
@@ -254,7 +255,24 @@ mjml
             desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh',
             number: '100'
           }
-        ])
+        ]) 
+        
+      //- clients
+      mj-section(
+        padding-bottom='20px'
+        background-repeat='no-repeat'
+        background-size='cover'
+        background-url=pathToImage + 'client-bg.jpg'
+        )
+        +subtitle-dual({
+          type: 'light',
+          first: 'Here is our awesome clients',
+          second: 'Amazing Testimonials'
+            })
+        mj-spacer(height='55px')
+        +review()
+        mj-spacer(height='35px')
+        
       //- social
       mj-section
         mj-column
