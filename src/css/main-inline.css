@@ -190,3 +190,12 @@ p {
 .review__position {
   font-size: 16px;
   color: white; }
+
+.client--border-right > table {
+  border-right: 1px solid #a5a5a5; }
+
+.client--border-bottom > table {
+  border-bottom: 1px solid #a5a5a5; }
+
+.client__image img {
+  max-width: 189px; }

@@ -1,3 +1,5 @@
+@import variables
+
 @media all and (min-width: 480px)
 
   .main-title div
@@ -12,3 +14,16 @@
   .section-image > td
     padding-top: 15px !important
     padding-right: 67px !important
+  
+  .client--border-right,
+  .client--border-bottom
+    & > table
+      border: none !important
+  
+  .client--border-right-XL
+    & > table
+      border-right: 1px solid $colorBorder !important
+      
+  .client--border-bottom-XL
+    & > table
+      border-bottom: 1px solid $colorBorder !important

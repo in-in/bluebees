@@ -1,0 +1,29 @@
+mixin client(list)
+  - const blck = 'client'
+  - const br = 'client--border-right'
+  - const bb = 'client--border-bottom'
+  - const brXL = 'client--border-right-XL'
+  - const bbXL = 'client--border-bottom-XL'
+  
+  each item in list
+    
+    - let classes = []
+    
+    if item.border
+      each val in item.border
+        case val
+          when 'br'
+            - classes.push(br)
+          when 'bb'
+            - classes.push(bb)
+          when 'brXL'
+            - classes.push(brXL)
+          when 'bbXL'
+            - classes.push(bbXL)
+      
+    mj-column(
+      css-class=classes.join(' '))
+      mj-image(
+        css-class=blck + '__image'
+        href='#x'
+        src=pathToImage + item.image)
