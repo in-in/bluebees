@@ -14,4 +14,7 @@
   .client--border-right-XL > table {
     border-right: 1px solid #a5a5a5 !important; }
   .client--border-bottom-XL > table {
-    border-bottom: 1px solid #a5a5a5 !important; } }
+    border-bottom: 1px solid #a5a5a5 !important; }
+  .section-price > table > tbody > tr > td {
+    padding-left: 60px !important;
+    padding-right: 60px !important; } }

@@ -40,6 +40,7 @@ mjml
             padding-top='20px'
             src=pathToImage + 'section1.png'
             width='157px')
+      
       //- features
       mj-section(
         padding-bottom='50px'
@@ -81,6 +82,7 @@ mjml
             align='center'
             padding-bottom='32px'
             padding-top='3px') Lorem ipsum dolor sit amet, consectetuer a iscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+      
       //- work style
       mj-section(background-color=mainColor)
         mj-column(vertical-align='middle')
@@ -109,7 +111,6 @@ mjml
             mj-class='text half-section-padding'
             color=whiteColor
             padding-bottom='26px') Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-          
       mj-section(background-color=mainColor)
         mj-column(vertical-align='middle')
           mj-text(
@@ -191,6 +192,7 @@ mjml
             desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh'
           }
         ])
+      
       //- work
       mj-section(background-color=mainColor)
         mj-column
@@ -209,6 +211,7 @@ mjml
             color=whiteColor) Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
           +button()&attributes({'align': 'left', 'mj-class': 'half-section-padding', 'padding-bottom': '50px'
             })
+      
       //- price
       mj-section(
         padding-bottom='20px'
@@ -218,14 +221,17 @@ mjml
           first: 'Here is our awesome Price',
           second: 'Awesome Price'
             })
-      mj-section(background-color=bodyBg)
+      mj-section(
+        padding-left='20px'
+        padding-right='20px'
+        background-color=bodyBg)
         mj-column(width='450px')
           mj-text(
             mj-class='text'
             align='center'
             padding-bottom='48px') Lorem ipsum dolor sit amet, consectetuer a iscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet
       mj-section(
-        mj-class='section-price'
+        css-class='section-price'
         background-color=bodyBg)
         +price([
           {
@@ -242,7 +248,7 @@ mjml
           }
         ])
       mj-section(
-        mj-class='section-price'
+        css-class='section-price'
         background-color=bodyBg)
         +price([
           {
