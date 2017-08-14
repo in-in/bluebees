@@ -4,10 +4,10 @@ include blocks/button.pug
 include blocks/subtitle-dual.pug
 include blocks/card.pug
 include blocks/price.pug
-include blocks/social.pug
 include blocks/underline.pug
 include blocks/review.pug
 include blocks/client.pug
+include blocks/footer.pug
 
 mjml
   include blocks/head.pug
@@ -146,9 +146,7 @@ mjml
           first: 'Take a look to our main services',
           second: 'Awesome  Services2'
             })
-      mj-section(
-        mj-class='section-service'
-        background-color=bodyBg)
+      mj-section(mj-class='section-service', background-color=bodyBg)
         +card([
           {
             cardClass: 'card--service',
@@ -169,9 +167,7 @@ mjml
             desc: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh'
           }
         ])
-      mj-section(
-        mj-class='section-service'
-        background-color=bodyBg)
+      mj-section(mj-class='section-service', background-color=bodyBg)
         +card([
           {
             cardClass: 'card--service',
@@ -194,6 +190,7 @@ mjml
         ])
       
       //- work
+      mj-spacer(height='25px')
       mj-section(background-color=mainColor)
         mj-column
           mj-image(src=pathToImage + 'work3.jpg')
@@ -213,9 +210,7 @@ mjml
             })
       
       //- price
-      mj-section(
-        padding-bottom='20px'
-        background-color=bodyBg)
+      mj-section(padding-bottom='20px', background-color=bodyBg)
         +subtitle-dual({
           type: false,
           first: 'Here is our awesome Price',
@@ -230,9 +225,7 @@ mjml
             mj-class='text'
             align='center'
             padding-bottom='48px') Lorem ipsum dolor sit amet, consectetuer a iscing elit, sed diam nonummy nibh euis.mod tincidunt ut laoreet
-      mj-section(
-        css-class='section-price'
-        background-color=bodyBg)
+      mj-section(css-class='section-price', background-color=bodyBg)
         +price([
           {
             title: 'Regular',
@@ -247,9 +240,7 @@ mjml
             number: '60'
           }
         ])
-      mj-section(
-        css-class='section-price'
-        background-color=bodyBg)
+      mj-section(css-class='section-price', background-color=bodyBg)
         +price([
           {
             title: 'Monthly',
@@ -270,8 +261,7 @@ mjml
         padding-bottom='20px'
         background-repeat='no-repeat'
         background-size='cover'
-        background-url=pathToImage + 'client-bg.jpg'
-        )
+        background-url=pathToImage + 'client-bg.jpg')
         +subtitle-dual({
           type: 'light',
           first: 'Here is our awesome clients',
@@ -282,8 +272,8 @@ mjml
         mj-spacer(height='35px')
       
       //- clients
-      mj-section(
-        background-color=whiteColor)
+      mj-spacer(height='45px')
+      mj-section(background-color=whiteColor)
         +subtitle-dual({
           type: 'dark',
           first: 'Here is our awesome portfolio',
@@ -339,8 +329,5 @@ mjml
               image: 'client8.png'
             }
           ])
-      
-      //- social
-      mj-section
-        mj-column
-          +social()
+      mj-spacer(height='45px')
+      +footer()
