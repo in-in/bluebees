@@ -1,5 +1,6 @@
 include blocks/variables.pug
 include blocks/hero.pug
+include blocks/spacer.pug
 include blocks/button.pug
 include blocks/subtitle-dual.pug
 include blocks/card.pug
@@ -190,7 +191,7 @@ mjml
         ])
       
       //- work
-      mj-spacer(height='25px')
+      +spacer('25px')
       mj-section(background-color=mainColor)
         mj-column
           mj-image(src=pathToImage + 'work3.jpg')
@@ -267,12 +268,15 @@ mjml
           first: 'Here is our awesome clients',
           second: 'Amazing Testimonials'
             })
-        mj-spacer(height='55px')
+        mj-column
+          mj-spacer(height='55px')
+          
         +review()
-        mj-spacer(height='35px')
+        mj-column
+          mj-spacer(height='35px')
       
       //- clients
-      mj-spacer(height='45px')
+      +spacer('45px')
       mj-section(background-color=whiteColor)
         +subtitle-dual({
           type: 'dark',
@@ -329,5 +333,5 @@ mjml
               image: 'client8.png'
             }
           ])
-      mj-spacer(height='45px')
+      +spacer('45px')
       +footer()

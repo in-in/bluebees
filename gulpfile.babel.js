@@ -1,31 +1,31 @@
-import gulp from 'gulp';
-import del from 'del';
-import browserSync from 'browser-sync';
-import pug from 'gulp-pug';
-import sass from 'gulp-sass';
-import mjml from 'gulp-mjml';
-import notify from 'gulp-notify';
-import imagemin from 'gulp-imagemin';
-import plumber from 'gulp-plumber';
+import gulp from 'gulp'
+import del from 'del'
+import browserSync from 'browser-sync'
+import pug from 'gulp-pug'
+import sass from 'gulp-sass'
+import mjml from 'gulp-mjml'
+import notify from 'gulp-notify'
+import imagemin from 'gulp-imagemin'
+import plumber from 'gulp-plumber'
 
 const paths = {
   dist: 'dist/',
   src: 'src/',
   images: {
-    get src () { return `${paths.src}assets/images/**/*.*`; },
-    get dist () { return `${paths.dist}assets/images/`; }
+    get src () { return `${paths.src}assets/images/**/*.*` },
+    get dist () { return `${paths.dist}assets/images/` }
   },
   sass: {
-    get src () { return `${paths.src}sass/*.sass`; },
-    get dist () { return `${paths.src}css/`; }
+    get src () { return `${paths.src}sass/*.sass` },
+    get dist () { return `${paths.src}css/` }
   }
-};
+}
 
-const server = browserSync.create();
+const server = browserSync.create()
 
 const reload = (done) => {
-  server.reload();
-  done();
+  server.reload()
+  done()
 }
 
 const serve = (done) => {
@@ -35,22 +35,22 @@ const serve = (done) => {
     open: false,
     reloadOnRestart: true,
     notify: false
-  });
-  done();
+  })
+  done()
 }
 
-const clean = () => del([paths.dist, paths.src + 'css']);
+const clean = () => del([paths.dist, paths.src + 'css'])
 
 const images = () => {
   return gulp.src(paths.images.src)
     .pipe(imagemin())
     .pipe(gulp.dest(paths.images.dist))
-};
+}
 
 const css = () => {
   return gulp.src(paths.sass.src)
     .pipe(plumber({
-      errorHandler: notify.onError(function(err) {
+      errorHandler: notify.onError(function (err) {
         return {
           title: err.plugin.toUpperCase(),
           message: err.message
@@ -66,10 +66,10 @@ const css = () => {
 const build = () => {
   return gulp.src(paths.src + '*.pug')
     .pipe(plumber({
-      errorHandler: notify.onError(function(err) {
+      errorHandler: notify.onError(function (err) {
         return {
-           title: err.plugin.toUpperCase(),
-           message: err.message
+          title: err.plugin.toUpperCase(),
+          message: err.message
         }
       })
     }))
@@ -77,16 +77,16 @@ const build = () => {
     .pipe(pug())
     .pipe(mjml())
     .pipe(gulp.dest(paths.dist))
-};
+}
 
 const watch = () => {
   gulp.watch(paths.src, {
     ignored: paths.src + 'css/'
-  }, gulp.series(css, build, reload));
-  gulp.watch(paths.images.src, gulp.series(images, reload));
+  }, gulp.series(css, build, reload))
+  gulp.watch(paths.images.src, gulp.series(images, reload))
 }
 
-export const dist = gulp.series(clean, css, build, images);
-const dev = gulp.series(clean, css, build, images, serve, watch);
+export const dist = gulp.series(clean, css, build, images)
+const dev = gulp.series(clean, css, build, images, serve, watch)
 
-export default dev;
+export default dev
