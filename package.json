@@ -1,29 +1,31 @@
 {
   "name": "bluebees",
-  "version": "1.0.0",
-  "description": "Responsive email",
+  "version": "2.0.0",
   "babel": {
     "presets": [
-      "latest"
+      "@babel/preset-env"
     ]
   },
   "scripts": {
-    "start": "gulp",
-    "dist": "gulp dist"
+    "dist": "gulp dist",
+    "ncu": "ncu",
+    "start": "gulp"
   },
   "license": "ISC",
   "devDependencies": {
-    "babel-preset-latest": "^6.24.1",
-    "babel-register": "^6.24.1",
-    "browser-sync": "^2.18.12",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "browser-sync": "^2.26.3",
     "del": "^3.0.0",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-imagemin": "^3.3.0",
-    "gulp-mjml": "^2.2.0",
-    "gulp-notify": "^3.0.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-pug": "^3.3.0",
-    "gulp-sass": "^3.1.0",
-    "pug-lint": "^2.4.0"
+    "gulp": "4.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-mjml": "^3.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "npm-check-updates": "^2.15.0",
+    "pug-lint": "^2.5.0"
   }
 }
