@@ -12,329 +12,328 @@ include blocks/footer.pug
 
 mjml
   include blocks/head.pug
-  mj-body
-    mj-container(width='800px', background-color=bodyBg)
-      +hero()
-      
-      //- what we do
-      mj-section(
-        mj-class='inner-padding'
-        padding-top='33px'
-        padding-bottom='45px'
-        background-color=mainColor)
-        mj-column(width='55%')
-          mj-text(
-            padding-bottom='4px'
-            color=whiteColor
-            font-size='30px'
-            font-weight='700') What we do?
-          mj-text(
-            mj-class='text'
-            padding-bottom='20px'
-            color=whiteColor) I&nbsp;used to&nbsp;be&nbsp;able to&nbsp;keep two assistants, but now&nbsp;I only keep one; and&nbsp;I would have a&nbsp;job to&nbsp;pay him but that 
-          +button()&attributes({'align': 'left'})
-        mj-column(width='45%')
-          mj-image(
-            css-class='section-image'
-            align='right'
-            alt='what we do'
-            padding-top='20px'
-            src=pathToImage + 'section1.png'
-            width='157px')
-      
-      //- features
-      mj-section(
-        padding-bottom='50px'
-        background-color=bodyBg)
-        +subtitle-dual({
-          type: false,
-          first: 'Take a look to our main services',
-          second: 'Awesome  Services'
-            })
-      mj-section(
-        padding-right='30px'
-        padding-left='30px')
-        +card([
-          {
-            cardClass: 'card--feature',
-            img: ['service1.png', 220],
-            title: 'Web Development',
-            desc: 'From north, south, east, and west every man who had a&nbsp;shade of&nbsp;red in&nbsp;his hair'
-          },
-          {
-            cardClass: 'card--feature',
-            img: ['service2.png', 220],
-            title: 'Graphic Design',
-            desc: 'Had tramped into the city to&nbsp;answer the advertisement. Fleet Street was choked'
-          },
-          {
-            cardClass: 'card--feature',
-            img: ['service3.png', 220],
-            title: 'Data Analytics',
-            desc: 'With red-headed folk, and Pope&rsquo;s Court looked like a&nbsp;coster&rsquo;s orange barrow'
-          }
-        ])
-      mj-section(
-        background-color=bodyBg
-        mj-class='inner-padding')
-        mj-column
-          mj-text(
-            mj-class='text'
-            align='center'
-            padding-bottom='32px'
-            padding-top='3px') I&nbsp;should not have thought there were so&nbsp;many in&nbsp;the whole country as&nbsp;were brought together by&nbsp;that single advertisement. Every shade of&nbsp;colour they were&mdash;straw, lemon, orange, brick, Irish-setter, liver, clay; but, as&nbsp;Spaulding said, there were not many who had the real vivid flame-coloured tint. When I&nbsp;saw how many were waiting, I&nbsp;would have given it&nbsp;up&nbsp;in&nbsp;despair; but Spaulding would not hear of&nbsp;it
-      
-      //- work style
-      mj-section(background-color=mainColor)
-        mj-column(vertical-align='middle')
-          mj-image(src=pathToImage + 'work1.jpg')
-        mj-column(vertical-align='top')
-          mj-text(
-            mj-class='half-section-padding'
-            color=whiteColor
-            font-size='20px'
-            font-weight='600'
-            padding-bottom='16px'
-            padding-top='65px') Simple and Clean
-          +underline(54, 14)
-          mj-text(
-            mj-class='text half-section-padding'
-            color=whiteColor) My&nbsp;friend was an&nbsp;enthusiastic musician, being himself not only a&nbsp;very capable performer but
-          mj-text(
-            mj-class='half-section-padding'
-            color=whiteColor
-            font-size='20px'
-            font-weight='600'
-            padding-bottom='16px'
-            padding-top='65px') Great Support
-          +underline(54, 14)
-          mj-text(
-            mj-class='text half-section-padding'
-            color=whiteColor
-            padding-bottom='26px') A&nbsp;composer of&nbsp;no&nbsp;ordinary merit. All the afternoon he&nbsp;sat in&nbsp;the stalls 
-      mj-section(background-color=mainColor)
-        mj-column(vertical-align='middle')
-          mj-text(
-            mj-class='half-section-padding'
-            color=whiteColor
-            font-size='20px'
-            font-weight='600'
-            padding-bottom='16px'
-            padding-top='65px') Simple and Clean
-          +underline(54, 14)
-          mj-text(
-            mj-class='text half-section-padding'
-            color=whiteColor) Happiness, gently waving his long, thin fingers in&nbsp;time to&nbsp;the music, while his gently smiling face
-          mj-text(
-            mj-class='half-section-padding'
-            color=whiteColor
-            font-size='20px'
-            font-weight='600'
-            padding-bottom='16px'
-            padding-top='65px') Great Support
-          +underline(54, 14)
-          mj-text(
-            mj-class='text half-section-padding'
-            color=whiteColor
-            padding-bottom='25px') And his languid, dreamy eyes were as&nbsp;unlike those of&nbsp;Holmes
-        mj-column
-          mj-image(src=pathToImage + 'work2.jpg')
+  mj-body(width='800px', background-color=bodyBg)
+    +hero()
+    
+    //- what we do
+    mj-section(
+      mj-class='inner-padding'
+      padding-top='33px'
+      padding-bottom='45px'
+      background-color=mainColor)
+      mj-column(width='55%')
+        mj-text(
+          padding-bottom='4px'
+          color=whiteColor
+          font-size='30px'
+          font-weight='700') What we do?
+        mj-text(
+          mj-class='text'
+          padding-bottom='20px'
+          color=whiteColor) I&nbsp;used to&nbsp;be&nbsp;able to&nbsp;keep two assistants, but now&nbsp;I only keep one; and&nbsp;I would have a&nbsp;job to&nbsp;pay him but that 
+        +button()&attributes({'align': 'left'})
+      mj-column(width='45%')
+        mj-image(
+          css-class='section-image'
+          align='right'
+          alt='what we do'
+          padding-top='20px'
+          src=pathToImage + 'section1.png'
+          width='157px')
+    
+    //- features
+    mj-section(
+      padding-bottom='50px'
+      background-color=bodyBg)
+      +subtitle-dual({
+        type: false,
+        first: 'Take a look to our main services',
+        second: 'Awesome  Services'
+          })
+    mj-section(
+      padding-right='30px'
+      padding-left='30px')
+      +card([
+        {
+          cardClass: 'card--feature',
+          img: ['service1.png', '220px'],
+          title: 'Web Development',
+          desc: 'From north, south, east, and west every man who had a&nbsp;shade of&nbsp;red in&nbsp;his hair'
+        },
+        {
+          cardClass: 'card--feature',
+          img: ['service2.png', '220px'],
+          title: 'Graphic Design',
+          desc: 'Had tramped into the city to&nbsp;answer the advertisement. Fleet Street was choked'
+        },
+        {
+          cardClass: 'card--feature',
+          img: ['service3.png', '220px'],
+          title: 'Data Analytics',
+          desc: 'With red-headed folk, and Pope&rsquo;s Court looked like a&nbsp;coster&rsquo;s orange barrow'
+        }
+      ])
+    mj-section(
+      background-color=bodyBg
+      mj-class='inner-padding')
+      mj-column
+        mj-text(
+          mj-class='text'
+          align='center'
+          padding-bottom='32px'
+          padding-top='3px') I&nbsp;should not have thought there were so&nbsp;many in&nbsp;the whole country as&nbsp;were brought together by&nbsp;that single advertisement. Every shade of&nbsp;colour they were&mdash;straw, lemon, orange, brick, Irish-setter, liver, clay; but, as&nbsp;Spaulding said, there were not many who had the real vivid flame-coloured tint. When I&nbsp;saw how many were waiting, I&nbsp;would have given it&nbsp;up&nbsp;in&nbsp;despair; but Spaulding would not hear of&nbsp;it
+    
+    //- work style
+    mj-section(background-color=mainColor)
+      mj-column(vertical-align='middle')
+        mj-image(src=pathToImage + 'work1.jpg')
+      mj-column(vertical-align='top')
+        mj-text(
+          mj-class='half-section-padding'
+          color=whiteColor
+          font-size='20px'
+          font-weight='600'
+          padding-bottom='16px'
+          padding-top='65px') Simple and Clean
+        +underline(54, 14)
+        mj-text(
+          mj-class='text half-section-padding'
+          color=whiteColor) My&nbsp;friend was an&nbsp;enthusiastic musician, being himself not only a&nbsp;very capable performer but
+        mj-text(
+          mj-class='half-section-padding'
+          color=whiteColor
+          font-size='20px'
+          font-weight='600'
+          padding-bottom='16px'
+          padding-top='65px') Great Support
+        +underline(54, 14)
+        mj-text(
+          mj-class='text half-section-padding'
+          color=whiteColor
+          padding-bottom='26px') A&nbsp;composer of&nbsp;no&nbsp;ordinary merit. All the afternoon he&nbsp;sat in&nbsp;the stalls 
+    mj-section(background-color=mainColor)
+      mj-column(vertical-align='middle')
+        mj-text(
+          mj-class='half-section-padding'
+          color=whiteColor
+          font-size='20px'
+          font-weight='600'
+          padding-bottom='16px'
+          padding-top='65px') Simple and Clean
+        +underline(54, 14)
+        mj-text(
+          mj-class='text half-section-padding'
+          color=whiteColor) Happiness, gently waving his long, thin fingers in&nbsp;time to&nbsp;the music, while his gently smiling face
+        mj-text(
+          mj-class='half-section-padding'
+          color=whiteColor
+          font-size='20px'
+          font-weight='600'
+          padding-bottom='16px'
+          padding-top='65px') Great Support
+        +underline(54, 14)
+        mj-text(
+          mj-class='text half-section-padding'
+          color=whiteColor
+          padding-bottom='25px') And his languid, dreamy eyes were as&nbsp;unlike those of&nbsp;Holmes
+      mj-column
+        mj-image(src=pathToImage + 'work2.jpg')
 
-      //- services
-      mj-section(padding-bottom='50px', background-color=bodyBg)
-        +subtitle-dual({
-          type: false,
-          first: 'Take a look to our main services',
-          second: 'Awesome  Services2'
-            })
-      mj-section(mj-class='section-service', background-color=bodyBg)
-        +card([
-          {
-            cardClass: 'card--service',
-            img: ['icon-services1.png', 64],
-            title: 'Web Design',
-            desc: 'Keen-witted, ready-handed criminal agent, as&nbsp;it&nbsp;was possible to&nbsp;conceive'
-          },
-          {
-            cardClass: 'card--service',
-            img: ['icon-services2.png', 64],
-            title: 'Graphic Design',
-            desc: 'In&nbsp;his singular character the dual nature alternately asserted itself'
-          },
-          {
-            cardClass: 'card--service',
-            img: ['icon-services3.png', 64],
-            title: 'SEO',
-            desc: 'And his extreme exactness and astuteness represented, as&nbsp;I have often thought'
-          }
-        ])
-      mj-section(mj-class='section-service', background-color=bodyBg)
-        +card([
-          {
-            cardClass: 'card--service',
-            img: ['icon-services4.png', 64],
-            title: 'Social Media',
-            desc: 'The reaction against the poetic and contemplative mood which occasionally'
-          },
-          {
-            cardClass: 'card--service',
-            img: ['icon-services5.png', 64],
-            title: 'Blog',
-            desc: 'Predominated in&nbsp;him. The swing of&nbsp;his nature took him from extreme languor to'
-          },
-          {
-            cardClass: 'card--service',
-            img: ['icon-services6.png', 64],
-            title: 'Creative',
-            desc: 'Devouring energy; and, as&nbsp;I knew well, he&nbsp;was never so&nbsp;truly formidable as&nbsp;when'
-          }
-        ])
+    //- services
+    mj-section(padding-bottom='50px', background-color=bodyBg)
+      +subtitle-dual({
+        type: false,
+        first: 'Take a look to our main services',
+        second: 'Awesome  Services2'
+          })
+    mj-section(mj-class='section-service', background-color=bodyBg)
+      +card([
+        {
+          cardClass: 'card--service',
+          img: ['icon-services1.png', '64px'],
+          title: 'Web Design',
+          desc: 'Keen-witted, ready-handed criminal agent, as&nbsp;it&nbsp;was possible to&nbsp;conceive'
+        },
+        {
+          cardClass: 'card--service',
+          img: ['icon-services2.png', '64px'],
+          title: 'Graphic Design',
+          desc: 'In&nbsp;his singular character the dual nature alternately asserted itself'
+        },
+        {
+          cardClass: 'card--service',
+          img: ['icon-services3.png', '64px'],
+          title: 'SEO',
+          desc: 'And his extreme exactness and astuteness represented, as&nbsp;I have often thought'
+        }
+      ])
+    mj-section(mj-class='section-service', background-color=bodyBg)
+      +card([
+        {
+          cardClass: 'card--service',
+          img: ['icon-services4.png', '64px'],
+          title: 'Social Media',
+          desc: 'The reaction against the poetic and contemplative mood which occasionally'
+        },
+        {
+          cardClass: 'card--service',
+          img: ['icon-services5.png', '64px'],
+          title: 'Blog',
+          desc: 'Predominated in&nbsp;him. The swing of&nbsp;his nature took him from extreme languor to'
+        },
+        {
+          cardClass: 'card--service',
+          img: ['icon-services6.png', '64px'],
+          title: 'Creative',
+          desc: 'Devouring energy; and, as&nbsp;I knew well, he&nbsp;was never so&nbsp;truly formidable as&nbsp;when'
+        }
+      ])
 
-      //- work
-      +spacer('25px')
-      mj-section(background-color=mainColor)
-        mj-column
-          mj-image(src=pathToImage + 'work3.jpg')
-        mj-column
-          mj-text(
-            mj-class='half-section-padding'
-            padding-top='40px'
-            padding-bottom='10px'
-            color=whiteColor
-            font-size='30px'
-            font-weight='600') Graphic Design
-          mj-text(
-            mj-class='text half-section-padding'
-            padding-bottom='45px'
-            color=whiteColor) For days on&nbsp;end, he&nbsp;had been lounging in&nbsp;his armchair amid his improvisations and his black-letter editions. Then it&nbsp;was that the lust of&nbsp;the chase would suddenly come upon him
-            
-          +button()&attributes({'align': 'left', 'mj-class': 'half-section-padding', 'padding-bottom': '50px'
-            })
-      
-      //- price
-      mj-section(padding-bottom='20px', background-color=bodyBg)
-        +subtitle-dual({
-          type: false,
-          first: 'Here is our awesome Price',
-          second: 'Awesome Price'
-            })
-      mj-section(
-        padding-left='20px'
-        padding-right='20px'
-        background-color=bodyBg)
-        mj-column(width='450px')
-          mj-text(
-            mj-class='text'
-            align='center'
-            padding-bottom='48px') And that his brilliant reasoning power would rise to&nbsp;the level of&nbsp;intuition, until those who were
-            
-      mj-section(css-class='section-price', background-color=bodyBg)
-        +price([
-          {
-            title: 'Regular',
-            subtitle: 'awesome portfolio',
-            desc: 'I&nbsp;trust that I&nbsp;am not more dense than my&nbsp;neighbours, but&nbsp;I was always oppressed',
-            number: '30'
-          },
-          {
-            title: 'Weekly',
-            subtitle: 'awesome portfolio',
-            desc: 'With a&nbsp;sense of&nbsp;my&nbsp;own stupidity in&nbsp;my&nbsp;dealings with Sherlock Holmes. Here I&nbsp;had',
-            number: '60'
-          }
-        ])
-      mj-section(css-class='section-price', background-color=bodyBg)
-        +price([
-          {
-            title: 'Monthly',
-            subtitle: 'awesome portfolio',
-            desc: 'Heard what he&nbsp;had heard, I&nbsp;had seen what he&nbsp;had seen, and yet from his words it',
-            number: '80'
-          },
-          {
-            title: 'Yearly',
-            subtitle: 'awesome portfolio',
-            desc: 'Was evident that he&nbsp;saw clearly not only what had happened but what was',
-            number: '100'
-          }
-        ])
-        
-      //- testimonials
-      mj-section(
-        padding-bottom='20px'
-        background-repeat='no-repeat'
-        background-size='cover'
-        background-url=pathToImage + 'client-bg.jpg')
-        +subtitle-dual({
-          type: 'light',
-          first: 'Here is our awesome clients',
-          second: 'Amazing Testimonials'
-            })
-        mj-column
-          mj-spacer(height='55px')
+    //- work
+    +spacer('25px')
+    mj-section(background-color=mainColor)
+      mj-column
+        mj-image(src=pathToImage + 'work3.jpg')
+      mj-column
+        mj-text(
+          mj-class='half-section-padding'
+          padding-top='40px'
+          padding-bottom='10px'
+          color=whiteColor
+          font-size='30px'
+          font-weight='600') Graphic Design
+        mj-text(
+          mj-class='text half-section-padding'
+          padding-bottom='45px'
+          color=whiteColor) For days on&nbsp;end, he&nbsp;had been lounging in&nbsp;his armchair amid his improvisations and his black-letter editions. Then it&nbsp;was that the lust of&nbsp;the chase would suddenly come upon him
           
-        +review()
-        mj-column
-          mj-spacer(height='35px')
+        +button()&attributes({'align': 'left', 'mj-class': 'half-section-padding', 'padding-bottom': '50px'
+          })
+    
+    //- price
+    mj-section(padding-bottom='20px', background-color=bodyBg)
+      +subtitle-dual({
+        type: false,
+        first: 'Here is our awesome Price',
+        second: 'Awesome Price'
+          })
+    mj-section(
+      padding-left='20px'
+      padding-right='20px'
+      background-color=bodyBg)
+      mj-column(width='450px')
+        mj-text(
+          mj-class='text'
+          align='center'
+          padding-bottom='48px') And that his brilliant reasoning power would rise to&nbsp;the level of&nbsp;intuition, until those who were
+          
+    mj-section(css-class='section-price', background-color=bodyBg)
+      +price([
+        {
+          title: 'Regular',
+          subtitle: 'awesome portfolio',
+          desc: 'I&nbsp;trust that I&nbsp;am not more dense than my&nbsp;neighbours, but&nbsp;I was always oppressed',
+          number: '30'
+        },
+        {
+          title: 'Weekly',
+          subtitle: 'awesome portfolio',
+          desc: 'With a&nbsp;sense of&nbsp;my&nbsp;own stupidity in&nbsp;my&nbsp;dealings with Sherlock Holmes. Here I&nbsp;had',
+          number: '60'
+        }
+      ])
+    mj-section(css-class='section-price', background-color=bodyBg)
+      +price([
+        {
+          title: 'Monthly',
+          subtitle: 'awesome portfolio',
+          desc: 'Heard what he&nbsp;had heard, I&nbsp;had seen what he&nbsp;had seen, and yet from his words it',
+          number: '80'
+        },
+        {
+          title: 'Yearly',
+          subtitle: 'awesome portfolio',
+          desc: 'Was evident that he&nbsp;saw clearly not only what had happened but what was',
+          number: '100'
+        }
+      ])
       
-      //- clients
-      +spacer('45px')
-      mj-section(background-color=whiteColor)
-        +subtitle-dual({
-          type: 'dark',
-          first: 'Here is our awesome portfolio',
-          second: 'Our Clients'
-            })
-      mj-section(mj-class='section-clients', padding-top='30px')
-        mj-column(width='450px')
-          mj-text(
-            mj-class='text'
-            align='center'
-            padding-bottom='48px') Happen, while to&nbsp;me&nbsp;the whole business was still confused and grotesque. As&nbsp;I&nbsp;drove home to&nbsp;my&nbsp;house&nbsp;in
-            
-      mj-section(mj-class='section-clients', padding-bottom='50px')
-        mj-group(width='50%')
-          +client([
-            {
-              image: 'client1.png',
-              border: ['br', 'bb', 'brXL', 'bbXL']
-            },
-            {
-              image: 'client2.png',
-              border: ['bb', 'brXL', 'bbXL']
-            }
-          ])
-        mj-group(width='50%')
-          +client([
-            {
-              image: 'client3.png',
-              border: ['br', 'bb',  'brXL', 'bbXL']
-            },
-            {
-              image: 'client4.png',
-              border: ['bb', 'bbXL']
-            }
-          ])
-        mj-group(width='50%')
-          +client([
-            {
-              image: 'client5.png',
-              border: ['br', 'bb', 'brXL']
-            },
-            {
-              image: 'client6.png',
-              border: ['bb', 'brXL']
-            }
-          ])
-        mj-group(width='50%')
-          +client([
-            {
-              image: 'client7.png',
-              border: ['br', 'brXL']
-            },
-            {
-              image: 'client8.png'
-            }
-          ])
-      +spacer('45px')
-      +footer()
+    //- testimonials
+    mj-section(
+      padding-bottom='20px'
+      background-repeat='no-repeat'
+      background-size='cover'
+      background-url=pathToImage + 'client-bg.jpg')
+      +subtitle-dual({
+        type: 'light',
+        first: 'Here is our awesome clients',
+        second: 'Amazing Testimonials'
+          })
+      mj-column
+        mj-spacer(height='55px')
+        
+      +review()
+      mj-column
+        mj-spacer(height='35px')
+    
+    //- clients
+    +spacer('45px')
+    mj-section(background-color=whiteColor)
+      +subtitle-dual({
+        type: 'dark',
+        first: 'Here is our awesome portfolio',
+        second: 'Our Clients'
+          })
+    mj-section(mj-class='section-clients', padding-top='30px')
+      mj-column(width='450px')
+        mj-text(
+          mj-class='text'
+          align='center'
+          padding-bottom='48px') Happen, while to&nbsp;me&nbsp;the whole business was still confused and grotesque. As&nbsp;I&nbsp;drove home to&nbsp;my&nbsp;house&nbsp;in
+          
+    mj-section(mj-class='section-clients', padding-bottom='50px')
+      mj-group(width='50%')
+        +client([
+          {
+            image: 'client1.png',
+            border: ['br', 'bb', 'brXL', 'bbXL']
+          },
+          {
+            image: 'client2.png',
+            border: ['bb', 'brXL', 'bbXL']
+          }
+        ])
+      mj-group(width='50%')
+        +client([
+          {
+            image: 'client3.png',
+            border: ['br', 'bb',  'brXL', 'bbXL']
+          },
+          {
+            image: 'client4.png',
+            border: ['bb', 'bbXL']
+          }
+        ])
+      mj-group(width='50%')
+        +client([
+          {
+            image: 'client5.png',
+            border: ['br', 'bb', 'brXL']
+          },
+          {
+            image: 'client6.png',
+            border: ['bb', 'brXL']
+          }
+        ])
+      mj-group(width='50%')
+        +client([
+          {
+            image: 'client7.png',
+            border: ['br', 'brXL']
+          },
+          {
+            image: 'client8.png'
+          }
+        ])
+    +spacer('45px')
+    +footer()

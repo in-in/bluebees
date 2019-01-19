@@ -1,14 +1,13 @@
-mixin social()
+mixin social(list)
   mj-social(
-    base-url=pathToIconSocial
-    display='facebook twitter google instagram'
-    facebook-icon-color=transparentColor
-    google-icon-color=transparentColor
     icon-size='37px'
     inner-padding='5px'
-    instagram-icon-color=transparentColor
     line-height='37px'
-    padding='0'
-    text-mode='false'
-    border-radius='0'
-    twitter-icon-color=transparentColor)/
+    padding='0px'
+    border-radius='0')
+    each item in list
+      mj-social-element(
+        name=item
+        src=`${pathToIconSocial}/${item}.png`
+        background-color=transparentColor
+      )
