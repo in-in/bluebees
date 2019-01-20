@@ -1,10 +1,9 @@
 mixin card(list)
   each item in list
     mj-column(
-      css-class='card ' + item.cardClass)
+      css-class=`card ${item.cardClass}`)&attributes(attributes)
 
       mj-image(
-        container-background-color=whiteColor
         css-class='card__image'
         src=pathToImage + item.img[0]
         width=item.img[1])
