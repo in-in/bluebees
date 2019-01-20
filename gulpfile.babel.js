@@ -33,11 +33,12 @@ const server = browserSync.create();
 
 const serve = done => {
   server.init({
-    server: { baseDir: paths.dist },
-    ui: false,
+    https: true,
+    notify: false,
     open: false,
     reloadOnRestart: true,
-    notify: false
+    server: { baseDir: paths.dist },
+    ui: false
   });
   done();
 };
