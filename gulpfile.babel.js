@@ -11,6 +11,7 @@ import plumber from 'gulp-plumber';
 const paths = {
   dist: 'dist/',
   src: 'src/',
+  tmp: 'tmp/',
   images: {
     get src() {
       return `${paths.src}assets/images/**/*.*`;
@@ -19,12 +20,12 @@ const paths = {
       return `${paths.dist}assets/images/`;
     }
   },
-  sass: {
+  styles: {
     get src() {
-      return `${paths.src}sass/*.sass`;
+      return `${paths.src}styles/*.sass`;
     },
     get dist() {
-      return `${paths.src}css/`;
+      return `${paths.tmp}/styles`;
     }
   }
 };
@@ -48,7 +49,7 @@ const reload = done => {
   done();
 };
 
-const clean = () => del([paths.dist, paths.src + 'css']);
+const clean = () => del([paths.dist, paths.tmp]);
 
 const images = () => {
   return gulp
@@ -57,9 +58,9 @@ const images = () => {
     .pipe(gulp.dest(paths.images.dist));
 };
 
-const css = () => {
+const styles = () => {
   return gulp
-    .src(paths.sass.src)
+    .src(paths.styles.src)
     .pipe(
       plumber({
         errorHandler: notify.onError(function(err) {
@@ -75,7 +76,7 @@ const css = () => {
         outputStyle: 'compressed'
       })
     )
-    .pipe(gulp.dest(paths.sass.dist));
+    .pipe(gulp.dest(paths.styles.dist));
 };
 
 const build = () => {
@@ -100,17 +101,9 @@ const build = () => {
 };
 
 const watch = () => {
-  gulp.watch(
-    paths.src,
-    {
-      ignored: paths.src + 'css'
-    },
-    gulp.series(css, build, reload)
-  );
+  gulp.watch(paths.src, gulp.series(styles, build, reload));
   gulp.watch(paths.images.src, gulp.series(images, reload));
 };
 
-export const dist = gulp.series(clean, css, build, images);
-const dev = gulp.series(clean, css, build, images, serve, watch);
-
-export default dev;
+export const dev = gulp.series(clean, styles, build, images, serve, watch);
+export const dist = gulp.series(clean, styles, build, images);

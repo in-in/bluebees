@@ -9,7 +9,7 @@
   "scripts": {
     "dist": "gulp dist",
     "ncu": "ncu",
-    "start": "gulp"
+    "start": "gulp dev"
   },
   "license": "ISC",
   "devDependencies": {
