@@ -1,7 +1,9 @@
 mixin card(list)
   each item in list
     mj-column(
-      css-class=`card ${item.cardClass}`)&attributes(attributes)
+      width='246px'
+      border=`13px solid ${transparentColor}`
+      css-class=`card ${item.cardClass}`)
 
       mj-image(
         css-class='card__image'
