@@ -149,7 +149,10 @@ mjml
         first: 'Take a look to our main services',
         second: 'Awesome  Services2'
           })
-    mj-section(mj-class='section-service', background-color=bodyBg)
+    mj-section(
+      mj-class='section-service'
+      background-color=bodyBg)
+
       +card([
         {
           cardClass: 'card--service',
@@ -169,8 +172,14 @@ mjml
           title: 'SEO',
           desc: 'And his extreme exactness and astuteness represented, as&nbsp;I have often thought'
         }
-      ])
-    mj-section(mj-class='section-service', background-color=bodyBg)
+      ])&attributes({
+        'width': '246px',
+        'border': '13px solid ' + transparentColor
+        })
+    mj-section(
+      mj-class='section-service'
+      background-color=bodyBg)
+
       +card([
         {
           cardClass: 'card--service',
@@ -190,7 +199,10 @@ mjml
           title: 'Creative',
           desc: 'Devouring energy; and, as&nbsp;I knew well, he&nbsp;was never so&nbsp;truly formidable as&nbsp;when'
         }
-      ])
+      ])&attributes({
+        'width': '246px',
+        'border': '13px solid ' + transparentColor
+        })
 
     //- work
     +spacer('25px')

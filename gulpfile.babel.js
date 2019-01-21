@@ -105,5 +105,11 @@ const watch = () => {
   gulp.watch(paths.images.src, gulp.series(images, reload));
 };
 
-export const dev = gulp.series(clean, styles, build, images, serve, watch);
-export const dist = gulp.series(clean, styles, build, images);
+export const dev = gulp.series(
+  clean,
+  styles,
+  gulp.parallel(build, images),
+  serve,
+  watch
+);
+export const dist = gulp.series(clean, styles, gulp.parallel(build, images));
